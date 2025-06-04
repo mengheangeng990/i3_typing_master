@@ -1,84 +1,48 @@
 # i3_typing_master
-i3 typing master midterm
 
-# Typing Master Project
+## Typing master
 
-## Overview
-Typing Master is a web app where users can test how fast and accurately they type. It has pages for signing up, logging in, resetting password, doing typing tests, checking results, and an About Us page.
+Typing Master is a web-based application designed to help users improve their typing speed and accuracy through interactive lessons and tests. It features user registration, login, typing tests, progress tracking, and a dashboard for reviewing typing history.
 
-## Pages Included
-1. First/Landing Page — made by me
-2. User Register Page — made by classmates
-3. Password Reset Page — made by classmates
-4. Login Page — made by classmates
-5. Test Results Page — made by classmates
-6. Typing Test Page — made by classmates
-7. About Us Page — made by me
+## Features
 
----
+- **User Registration & Login:**  
+  Users can create an account and log in securely. Registration checks for unique usernames and emails.
 
-## How to Setup, Compile, and Run the Project Locally
+- **Typing Test:**  
+  Interactive typing test with selectable durations (60s, 90s, 120s, 180s). Real-time WPM and accuracy stats are displayed.
 
-### Requirements
-- A modern web browser (Chrome, Firefox, Edge, etc.)
-- (Optional but recommended) A simple HTTP server (such as VSCode Live Server extension or Python's built-in server)
+- **Progress Tracking:**  
+  After each test, results (WPM, accuracy, time, date) are saved to the logged-in user's history in localStorage.
 
-### Steps
+- **Dashboard:**  
+  Logged-in users can view their typing history, including WPM, accuracy, and test date. Users can delete individual history entries.
 
-#### 1. Download or Clone the Project
-- Download the ZIP from your repository or use Git:
-  ```
-  git clone <your-repo-url>
-  ```
-- Extract or open the folder on your computer.
+- **Responsive Design:**  
+  The UI is responsive and works well on both desktop and mobile devices.
 
-#### 2. Open the Project Folder
-- Open the folder in your file explorer or in Visual Studio Code.
+- **About Us:**  
+  Learn more about the project, team, and mission.
 
-#### 3. Run the Project
+## How It Works
 
-**Option 1: Open Directly in Browser**
-- Double-click `index.html` to open it in your browser.
-- _Note: Some features (like saving/loading data) may not work perfectly due to browser security restrictions when opening files directly._
+- **Data Storage:**  
+  All user data and typing history are stored in the browser's `localStorage`. No backend is required.
 
-**Option 2: Use a Local Server (Recommended)**
-- Open a terminal/command prompt in the project folder.
-- If you have Python 3 installed, run:
-  ```
-  python -m http.server 8000
-  ```
-  Or with Python 2:
-  ```
-  python -m SimpleHTTPServer 8000
-  ```
-- Open your browser and go to: [http://localhost:8000](http://localhost:8000)
-- All features will work as expected.
+- **Navigation:**  
+  The navigation bar is consistent across all pages and styled to match the footer.
 
-**Option 3: Use VSCode Live Server**
-- If you use Visual Studio Code, install the "Live Server" extension.
-- Right-click `index.html` and select "Open with Live Server".
+- **Session Management:**  
+  The currently logged-in user is tracked via `localStorage` (`currentUser`). Logging out removes this key.
 
----
+- **Typing Test:**  
+  The test area is keyboard-accessible. Results are calculated and shown in a modal summary, and saved if the user is logged in.
 
-### How to Use the App
+- **Dashboard:**  
+  Displays a table of all past typing tests for the logged-in user. Each entry can be deleted individually.
 
-- Use the navigation bar to move between pages.
-- Register a new user, then log in.
-- Take the typing test and view your results.
-- Try the password reset page (demo only, no real emails sent).
+## Getting Started
 
----
-
-## Technologies Used
-
-- HTML for structure
-- CSS for styling
-- JavaScript for interactivity and saving data in the browser (localStorage)
-
----
-
-## Notes
-
-- All data (like test results) is saved in your browser only.
-- There is no backend or database.
-- Password reset is for demonstration and does not send real emails.
+1. Clone or download the repository.
+2. Open `index.html` in your browser.
+3. Register a new account, log in, and start practicing!
