@@ -1,56 +1,84 @@
 # i3_typing_master
 i3 typing master midterm
+
 # Typing Master Project
 
-## Overview  
-Typing Master is a web application that allows users to test their typing speed and accuracy. It features user registration, login, password reset, a typing test interface, result tracking, and an About Us page.
+## Overview
+Typing Master is a web app where users can test how fast and accurately they type. It has pages for signing up, logging in, resetting password, doing typing tests, checking results, and an About Us page.
 
-## Pages Included  
-1. First/Landing Page — created by Me  
-2. User Registering Page — created by classmates  
-3. User Reset Password Page — created by classmates  
-4. User Login Page — created by classmates  
-5. List of Test Results for a User — created by classmates  
-6. User Typing Test Page — created by classmates  
-7. About Us Page — created by Me  
+## Pages Included
+1. First/Landing Page — made by me
+2. User Register Page — made by classmates
+3. Password Reset Page — made by classmates
+4. Login Page — made by classmates
+5. Test Results Page — made by classmates
+6. Typing Test Page — made by classmates
+7. About Us Page — made by me
 
-## Setup Instructions  
+---
 
-### Prerequisites  
-- A modern web browser (Chrome, Firefox, Edge, Safari)  
-- Optional: A simple HTTP server (e.g., VSCode Live Server, Python HTTP server) for better local testing  
+## How to Setup, Compile, and Run the Project Locally
 
-### How to Run Locally  
-1. Clone or download the project folder to your local machine.  
-2. Open the folder in your code editor or file explorer.  
-3. To run directly:  
-   - Open `index.html` in your browser.  
-   - Note: Some features like localStorage work best when served via a local server.  
+### Requirements
+- A modern web browser (Chrome, Firefox, Edge, etc.)
+- (Optional but recommended) A simple HTTP server (such as VSCode Live Server extension or Python's built-in server)
 
-4. To use a local server (recommended):  
-   - If you have Python installed, open a terminal in the project folder and run:  
-     - For Python 3: `python3 -m http.server 8000`  
-     - For Python 2: `python -m SimpleHTTPServer 8000`  
-   - Then open `http://localhost:8000` in your browser.  
+### Steps
 
-### Testing the Application  
-- Navigate through pages via the navigation bar.  
-- Register a new user, log in, and try the typing test.  
-- After submitting a typing test, results are saved locally and can be viewed on the dashboard.  
-- Use the password reset page to test email input functionality (no backend, just demo alert).  
+#### 1. Download or Clone the Project
+- Download the ZIP from your repository or use Git:
+  ```
+  git clone <your-repo-url>
+  ```
+- Extract or open the folder on your computer.
 
-## Technologies Used  
-- HTML5  
-- CSS3 (inline and internal styling)  
-- JavaScript (vanilla JS for form handling and localStorage)  
+#### 2. Open the Project Folder
+- Open the folder in your file explorer or in Visual Studio Code.
 
-## Notes  
-- The project uses `localStorage` to save test results locally.  
-- No backend server or database is included; all functionality runs client-side.  
-- Password reset is a demo with no actual email sending.  
+#### 3. Run the Project
 
-## Contact  
-For questions or help, please contact:  
-Typing Master Team — info@typingmaster.com  
+**Option 1: Open Directly in Browser**
+- Double-click `index.html` to open it in your browser.
+- _Note: Some features (like saving/loading data) may not work perfectly due to browser security restrictions when opening files directly._
 
-© 2025 Typing Master
+**Option 2: Use a Local Server (Recommended)**
+- Open a terminal/command prompt in the project folder.
+- If you have Python 3 installed, run:
+  ```
+  python -m http.server 8000
+  ```
+  Or with Python 2:
+  ```
+  python -m SimpleHTTPServer 8000
+  ```
+- Open your browser and go to: [http://localhost:8000](http://localhost:8000)
+- All features will work as expected.
+
+**Option 3: Use VSCode Live Server**
+- If you use Visual Studio Code, install the "Live Server" extension.
+- Right-click `index.html` and select "Open with Live Server".
+
+---
+
+### How to Use the App
+
+- Use the navigation bar to move between pages.
+- Register a new user, then log in.
+- Take the typing test and view your results.
+- Try the password reset page (demo only, no real emails sent).
+
+---
+
+## Technologies Used
+
+- HTML for structure
+- CSS for styling
+- JavaScript for interactivity and saving data in the browser (localStorage)
+
+---
+
+## Notes
+
+- All data (like test results) is saved in your browser only.
+- There is no backend or database.
+- Password reset is for demonstration and does not send real emails.
