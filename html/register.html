@@ -3,10 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Master</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Register | Typing Master</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <style>
-        /* Additional styles specific to registration page */
+        nav.main-nav {
+            display: flex;
+            gap: 28px;
+            justify-content: center;
+            background: linear-gradient(90deg, #2a7ae2 70%, #185ca1 100%);
+            padding: 16px 0;
+            border-radius: 8px;
+            margin: 0 auto 36px auto;
+            max-width: 700px;
+            box-shadow: 0 2px 12px rgba(42, 122, 226, 0.10);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: box-shadow 0.2s;
+        }
+        nav.main-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 10px 22px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            letter-spacing: 0.5px;
+        }
+        nav.main-nav a:hover, nav.main-nav a:focus {
+            background: #fff;
+            color: #2a7ae2;
+            box-shadow: 0 2px 8px rgba(42,122,226,0.08);
+        }
+        nav.main-nav a.active {
+            background: #fff;
+            color: #2a7ae2;
+            box-shadow: 0 2px 8px rgba(42,122,226,0.12);
+            cursor: default;
+        }
+        .header {
+            text-align: center;
+            margin: 32px auto 24px auto;
+            padding: 16px 0 8px 0;
+        }
+        .header h1 {
+            color: #2a7ae2;
+            font-size: 2.3em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        .header p {
+            color: #185ca1;
+            font-size: 1.18em;
+            font-weight: 500;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
         .registration-form {
             max-width: 500px;
             margin: 2rem auto;
@@ -15,45 +69,82 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
         .form-group {
             margin-bottom: 1.5rem;
         }
-        
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #2c3e50;
+            font-weight: 700;
+            color: #2a7ae2;
+            font-size: 1.08em;
+            letter-spacing: 0.5px;
         }
-        
         .form-group input {
             width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
+            padding: 1rem;
+            border: 2px solid #2a7ae2;
+            border-radius: 6px;
+            font-size: 1.08em;
+            font-weight: 600;
+            color: #185ca1;
+            background: #f7faff;
+            box-shadow: 0 2px 8px rgba(42,122,226,0.06);
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
-        
         .form-group input:focus {
             outline: none;
-            border-color: #3498db;
-            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+            border-color: #185ca1;
+            box-shadow: 0 0 0 2px #2a7ae233;
         }
-        
         .password-requirements {
             font-size: 0.9rem;
             color: #7f8c8d;
             margin-top: 0.5rem;
         }
-        
         .login-link {
             text-align: center;
             margin-top: 1.5rem;
         }
+        .btn.btn-primary {
+            background: linear-gradient(90deg, #2a7ae2 70%, #185ca1 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.15em;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(42,122,226,0.10);
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+        }
+        .btn.btn-primary:hover, .btn.btn-primary:focus {
+            background: #185ca1;
+            box-shadow: 0 4px 16px rgba(42,122,226,0.18);
+            transform: translateY(-2px) scale(1.03);
+            color: #fff;
+        }
+        footer .main-footer {
+            margin-top: 40px;
+            padding: 20px 0 10px 0;
+            background: #f7faff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(42,122,226,0.05);
+        }
+        footer .main-footer p {
+            text-align: center;
+            color: #888;
+            font-size: 0.98em;
+        }
     </style>
 </head>
 <body>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="login.html">Login</a>
+        <a href="register.html" class="active">Register</a>
+    </nav>
     <header class="header">
         <div class="container">
             <h1>Typing Master</h1>
@@ -65,36 +156,54 @@
         <div class="container">
             <form class="registration-form" action="/register" method="POST">
                 <h2>Create Account</h2>
-                
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        required
+                        placeholder="Enter your username"
+                    >
                 </div>
-                
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="Enter your email address"
+                    >
                 </div>
-                
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                        placeholder="Enter your password"
+                    >
                     <div class="password-requirements">
                         Password must be at least 8 characters long
                     </div>
                 </div>
-                
                 <div class="form-group">
                     <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirm-password"
+                        required
+                        placeholder="Re-enter your password"
+                    >
                 </div>
-                
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">
                         Register
                     </button>
                 </div>
-                
                 <div class="login-link">
                     Already have an account? <a href="login.html">Sign in</a>
                 </div>
@@ -104,11 +213,6 @@
 
     <footer class="main-footer">
         <div class="container">
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="login.html">Login</a>
-                <a href="typing-test.html">Typing Test</a>
-            </nav>
             <p>&copy; 2025 Typing Master. All rights reserved.</p>
         </div>
     </footer>
