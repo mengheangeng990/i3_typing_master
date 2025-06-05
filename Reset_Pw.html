@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reset Password</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #f1f3f6;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .reset-box {
+      background: #fff;
+      padding: 2.5rem 2rem 2rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 32px rgba(60,72,90,0.10);
+      width: 100%;
+      max-width: 340px;
+    }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .logo {
+      font-size: 2.3rem;
+      font-weight: bold;
+      color: #ec4343;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      user-select: none;
+    }
+    .reset-box h2 {
+      margin: 0 0 16px 0;
+      text-align: center;
+      color: #234;
+      font-weight: 600;
+      font-size: 1.5rem;
+      letter-spacing: 0.01em;
+    }
+    .reset-box p {
+      text-align: center;
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 26px;
+    }
+    .reset-box label {
+      display: block;
+      margin-bottom: 6px;
+      color: #345;
+      font-size: 1rem;
+    }
+    .reset-box input[type="email"] {
+      width: 100%;
+      padding: 10px 11px;
+      font-size: 1rem;
+      border: 1px solid #ccd3db;
+      border-radius: 6px;
+      margin-bottom: 18px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .reset-box input[type="email"]:focus {
+      border-color: #3b82f6;
+      background: #f0f6fd;
+    }
+    .reset-box button {
+      width: 100%;
+      padding: 11px 0;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.07rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.18s;
+      margin-bottom: 4px;
+    }
+    .reset-box button:hover {
+      background: #2363be;
+    }
+    .reset-box .footer-link {
+      font-size: 0.98rem;
+      text-align: center;
+      margin-top: 16px;
+    }
+    .reset-box .footer-link a {
+      color: #3b82f6;
+      text-decoration: none;
+      transition: color 0.18s;
+    }
+    .reset-box .footer-link a:hover {
+      color: #174bad;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="reset-box">
+    <div class="logo-row">
+      <span class="logo">TypingMaster</span>
+    </div>
+    <h2>Forgot your password?</h2>
+    <p>Enter your email address and we'll send you a link to reset your password.</p>
+    <form autocomplete="off">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@email.com" required>
+      <button type="submit">Send Reset Link</button>
+    </form>
+    <div class="footer-link">
+      <a href="login.html">Back to Sign In</a>
+    </div>
+  </div>
+</body>
+</html>
